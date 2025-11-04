@@ -29,3 +29,9 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/web
+          force: true
+
+      - name: Print deployment status
+        run: |
+          echo "Deployment completed successfully!"
+          ls -la ./build/web
